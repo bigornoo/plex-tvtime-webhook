@@ -1,3 +1,4 @@
+ #!/usr/bin/env sh
 if [ -e /opt/plex-tvtime-webhook/conf/.env ]; then 
         source /opt/plex-tvtime-webhook/conf/.env
 else 
