@@ -1,4 +1,4 @@
-version: '2'
+version: '2.4'
 services:
   tvtimeplex:
     container_name: tvtimeplex
@@ -6,5 +6,8 @@ services:
       context: .
     image: "bigorno/plex-tvtime-webhook:latest"
     restart: unless-stopped
+    ports:
+      - "10000:10000"
     volumes:
       - ./conf:/opt/plex-tvtime-webhook/conf
+    entrypoint: /usr/local/bin/entrypoint.sh

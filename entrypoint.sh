@@ -1,6 +1,11 @@
-
-source conf/.env
-# if  [ -z $TVTIME_ACCESS_TOKEN ]; then
-#     exec register.js
-# else 
-#     exec index.js
+if [ -e /opt/plex-tvtime-webhook/conf/.env ]; then 
+        source /opt/plex-tvtime-webhook/conf/.env
+else 
+        echo ".env file needed in conf folder"
+        exit 1
+fi
+if [ -z $TVTIME_ACCESS_TOKEN ]; then
+        /opt/plex-tvtime-webhook/register.js
+else
+        node /opt/plex-tvtime-webhook/index.js
+fi
