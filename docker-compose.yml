@@ -4,7 +4,7 @@ services:
     container_name: tvtimeplex
     build:
       context: .
-    image: "bigorno/plex-tvtime-webhook:0.1"
+    image: "bigorno/plex-tvtime-webhook:latest"
     restart: unless-stopped
     volumes:
       - ./conf:/opt/plex-tvtime-webhook/conf
