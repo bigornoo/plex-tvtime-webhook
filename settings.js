@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config({
-  path: process.env.ENV_FILE || '.env',
+  path: process.env.ENV_FILE || 'conf/.env',
 });
 
 const TVTIME_CLIENT_ID = process.env.TVTIME_CLIENT_ID;
