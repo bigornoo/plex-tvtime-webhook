@@ -9,5 +9,5 @@ services:
     ports:
       - "10000:10000"
     volumes:
-      - ./conf:/opt/plex-tvtime-webhook/conf
+      - ./conf/.env:/opt/plex-tvtime-webhook/conf/.env
     #entrypoint: ash
