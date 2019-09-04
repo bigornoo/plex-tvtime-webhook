@@ -8,4 +8,4 @@ COPY entrypoint.sh /usr/local/bin/
 #COPY .env.example /opt/plex-tvtime-webhook/conf/.env
 RUN mkdir /opt/plex-tvtime-webhook/conf && cd /opt/plex-tvtime-webhook && npm install --production && chmod +x /usr/local/bin/entrypoint.sh
 EXPOSE 10000
-#CMD [ "/usr/local/bin/entrypoint.sh" ]
+CMD [ "/usr/local/bin/entrypoint.sh" ]

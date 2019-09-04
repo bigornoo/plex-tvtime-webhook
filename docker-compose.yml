@@ -10,4 +10,3 @@ services:
       - "10000:10000"
     volumes:
       - ./conf:/opt/plex-tvtime-webhook/conf
-    entrypoint: /usr/local/bin/entrypoint.sh
