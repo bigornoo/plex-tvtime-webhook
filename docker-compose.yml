@@ -1,0 +1,10 @@
+version: '2'
+services:
+  tvtimeplex:
+    container_name: tvtimeplex
+    build:
+      context: .
+    image: "bigorno/plex-tvtime-webhook:0.1"
+    restart: unless-stopped
+    volumes:
+      - conf_env:/opt/plex-tvtime-webhook/.env
