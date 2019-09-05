@@ -2,12 +2,10 @@ version: '2.4'
 services:
   tvtimeplex:
     container_name: tvtimeplex
-    build:
-      context: .
     image: "bigorno/plex-tvtime-webhook:latest"
     restart: unless-stopped
     ports:
       - "10000:10000"
     volumes:
       - ./conf/.env:/opt/plex-tvtime-webhook/conf/.env
-      
+
